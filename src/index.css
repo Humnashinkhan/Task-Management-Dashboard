@@ -1,0 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;600;700&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Bricolage Grotesque", system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  /* Neutrals: warm cream to deep teal-ink (replaces slate) */
+  --color-ink-50: #f6f4ee;
+  --color-ink-100: #ebe8de;
+  --color-ink-200: #dcd8c9;
+  --color-ink-300: #c3beab;
+  --color-ink-400: #9b9783;
+  --color-ink-500: #77755f;
+  --color-ink-600: #58574a;
+  --color-ink-700: #3d4440;
+  --color-ink-800: #1c3a38;
+  --color-ink-900: #11292a;
+
+  /* Main accent: persimmon (replaces indigo) */
+  --color-brand-50: #fff1ec;
+  --color-brand-100: #ffdfd3;
+  --color-brand-200: #ffbfa8;
+  --color-brand-400: #ff8f66;
+  --color-brand-500: #e2582b;
+  --color-brand-600: #c94a20;
+  --color-brand-700: #a53b19;
+  --color-brand-800: #8c351d;
+
+  /* Pending: honey (replaces amber) */
+  --color-honey-100: #fbefc4;
+  --color-honey-400: #e8b63a;
+  --color-honey-600: #a87a0a;
+  --color-honey-800: #6e4f06;
+
+  /* In Progress: lagoon (replaces blue) */
+  --color-lagoon-100: #d3ecee;
+  --color-lagoon-500: #2a9aa3;
+  --color-lagoon-600: #1d7f88;
+  --color-lagoon-800: #14535a;
+
+  /* Completed: moss (replaces emerald) */
+  --color-moss-100: #dcebd0;
+  --color-moss-500: #5f9a3c;
+  --color-moss-600: #46792a;
+  --color-moss-800: #2f4f1b;
+
+  /* Medium priority: plum (replaces orange) */
+  --color-plum-100: #efdcee;
+  --color-plum-800: #5e2a5c;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: #faf6ee;
+  color: #11292a;
+}

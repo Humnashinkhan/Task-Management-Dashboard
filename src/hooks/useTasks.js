@@ -1,0 +1,38 @@
+import { useEffect, useMemo, useState, useCallback } from "react";
+import { loadTasks, saveTasks, makeId } from "../utils/storage";
+
+export default function useTasks() {
+  const [tasks, setTasks] = useState(loadTasks);
+
+  useEffect(() => {
+    saveTasks(tasks);
+  }, [tasks]);
+
+  const addTask = useCallback((data) => {
+    setTasks((prev) => [
+      { ...data, id: makeId(), createdAt: Date.now() },
+      ...prev,
+    ]);
+  }, []);
+
+  const updateTask = useCallback((id, data) => {
+    setTasks((prev) => prev.map((t) => (t.id === id ? { ...t, ...data } : t)));
+  }, []);
+
+  const deleteTask = useCallback((id) => {
+    setTasks((prev) => prev.filter((t) => t.id !== id));
+  }, []);
+
+  // Counts are derived from tasks, so they always update immediately.
+  const counts = useMemo(
+    () => ({
+      total: tasks.length,
+      pending: tasks.filter((t) => t.status === "Pending").length,
+      inProgress: tasks.filter((t) => t.status === "In Progress").length,
+      completed: tasks.filter((t) => t.status === "Completed").length,
+    }),
+    [tasks]
+  );
+
+  return { tasks, counts, addTask, updateTask, deleteTask };
+}
