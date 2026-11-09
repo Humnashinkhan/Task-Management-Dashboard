@@ -3,7 +3,7 @@
 A clean, responsive task management dashboard built with **React**, **Vite** and **Tailwind CSS**. Users can create, edit, search, filter, sort and delete tasks. All data is stored in the browser's LocalStorage, so no backend is needed.
 
 **Live demo:** <your-vercel-or-netlify-link>
-**Repository:** <your-github-repo-link>
+**Repository:** https://github.com/Humnashinkhan/Task-Management-Dashboard
 
 ---
 
