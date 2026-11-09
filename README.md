@@ -146,5 +146,5 @@ The app is deployed on Vercel / Netlify with the default Vite settings:
 
 ## Author
 
-**<Your Name>**
-<your-email> · <your-github-profile>
+**HUMNASHIN KHAN**
+humnashin9955@gmail.com · 
